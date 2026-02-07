@@ -128,3 +128,13 @@ header nav a.active{
   content:"✔️ ";
   margin-right:5px;
 }
+.logo {
+  height: 100px;           /* adjust size if needed */
+  display: block;          /* center the image */
+  margin: 0 auto 10px;     /* spacing below logo */
+  border-radius: 50%;      /* optional round photo */
+}
+
+
+
+
