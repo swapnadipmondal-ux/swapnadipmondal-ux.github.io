@@ -157,12 +157,19 @@ header nav a.active{
   margin: 0 auto;
 }
 
-.media-item video,
-.media-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+.animate-video {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: videoFadeUp 1.2s ease-out forwards;
+}
+
+@keyframes videoFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 }
 
 
