@@ -391,6 +391,61 @@ AOS.init({duration:1000,once:true});
     <p>© 2026 <strong>SM Web Studio</strong> — Crafted & Managed by Swapnadip Mondal</p>
   </div>
 </footer>
+<!-- THEME TOGGLE -->
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+<section class="sm-dark-section reveal">
+
+  <h2>What People Are Saying</h2>
+  <p class="sm-desc">
+    Trusted by businesses for design, development, and digital growth.
+  </p>
+
+  <!-- TESTIMONIAL SLIDER -->
+  <div class="testimonial-slider">
+    <div class="testimonial-track" id="testimonialTrack">
+      <div class="testimonial">“Great experience and fast delivery.”</div>
+      <div class="testimonial">“Professional work with premium quality.”</div>
+      <div class="testimonial">“Highly recommended for startups.”</div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-grid">
+    <div class="stat-box">
+      <h3 data-count="1">0</h3>
+      <p>Year Experience</p>
+    </div>
+    <div class="stat-box">
+      <h3 data-count="200">0</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat-box">
+      <h3 data-count="100">0</h3>
+      <p>Client Satisfaction %</p>
+    </div>
+    <div class="stat-box">
+      <h3>24/7</h3>
+      <p>Support</p>
+    </div>
+  </div>
+
+  <!-- ADMIN TESTIMONIAL ADD -->
+  <div class="admin-panel">
+    <input id="reviewText" placeholder="Add testimonial (admin)">
+    <button onclick="addReview()">Add Testimonial</button>
+  </div>
+
+  <div id="testimonialList"></div>
+
+</section>
+
+<!-- WHATSAPP POPUP -->
+<div class="wa-popup" id="waPopup">
+  <p>👋 Need a website?</p>
+  <a href="https://wa.me/91XXXXXXXXXX" target="_blank">Chat on WhatsApp</a>
+  <span onclick="closeWA()">✕</span>
+</div>
 
 </body>
 </html>
