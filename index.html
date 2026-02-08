@@ -1,199 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SM Web Studio | Professional Web Design Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SM Web Studio | Professional Web Design</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <!-- AOS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8884576525136905"
+crossorigin="anonymous"></script>
 
-  <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8884576525136905"
-    crossorigin="anonymous"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Poppins,sans-serif;
+background:#020617;
+color:#e5e7eb;
+scroll-behavior:smooth;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #020617;
-      color: #e5e7eb;
-    }
+/* HEADER */
+header{
+position:fixed;
+top:0;width:100%;
+z-index:1000;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(2,6,23,.75);
+backdrop-filter:blur(12px);
+}
+header strong{font-size:18px}
+header a{
+color:#e5e7eb;
+text-decoration:none;
+margin-left:18px;
+font-weight:500;
+}
+header a:hover{color:#38bdf8}
 
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(2,6,23,0.85);
-      backdrop-filter: blur(10px);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-    }
+/* HERO */
+.hero{
+position:relative;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+.hero video{
+position:absolute;
+top:50%;left:50%;
+min-width:100%;min-height:100%;
+transform:translate(-50%,-50%);
+object-fit:cover;
+}
+.hero::after{
+content:"";
+position:absolute;inset:0;
+background:linear-gradient(to bottom,rgba(2,6,23,.6),#020617);
+}
+.hero-content{
+position:relative;z-index:2;
+}
+.hero-content img{
+width:140px;height:140px;
+border-radius:50%;
+border:4px solid #38bdf8;
+margin-bottom:20px;
+box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
 
-    header a {
-      color: #e5e7eb;
-      margin-left: 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 36px;
+border-radius:50px;
+background:linear-gradient(90deg,#2563eb,#1e40af);
+color:#fff;text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #2563eb;
+}
 
-    /* HERO */
-    .hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+/* SECTIONS */
+section{
+padding:120px 20px;
+text-align:center;
+}
 
-    .hero video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: 1;
-    }
+/* GALLERY */
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:40px;
+}
+.gallery img{
+width:280px;
+border-radius:18px;
+transition:.4s;
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+}
+.gallery img:hover{
+transform:translateY(-10px) scale(1.04);
+}
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(2,6,23,0.65);
-      z-index: 2;
-    }
+/* NEXT / PREV */
+.nav-btns{
+margin-top:50px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+.nav-btns button{
+padding:12px 25px;
+border-radius:50px;
+border:none;
+cursor:pointer;
+font-weight:600;
+background:#1e293b;
+color:#fff;
+}
+.nav-btns button:hover{background:#2563eb}
 
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 800px;
-      padding: 20px;
-    }
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+right:20px;bottom:20px;
+background:#25D366;
+color:#fff;
+padding:15px 18px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+z-index:1000;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
 
-    .hero-content img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #38bdf8;
-      margin-bottom: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    }
+/* SCROLL TOP */
+#topBtn{
+position:fixed;
+bottom:90px;right:20px;
+display:none;
+padding:12px 15px;
+border-radius:50%;
+background:#2563eb;
+color:#fff;
+cursor:pointer;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 30px;
-      background: linear-gradient(90deg,#2563eb,#1e40af);
-      color: #fff;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+/* FOOTER */
+footer{
+background:#020617;
+padding:35px;
+text-align:center;
+font-size:14px;
+color:#94a3b8;
+}
 
-    section {
-      padding: 100px 20px;
-      text-align: center;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .gallery img {
-      width: 280px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-    }
-
-    footer {
-      background: #020617;
-      padding: 30px;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-      .hero-content img {
-        width: 110px;
-        height: 110px;
-      }
-    }
-  </style>
+@media(max-width:768px){
+.hero-content img{width:110px;height:110px}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">SM Web Studio</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<strong>SM Web Studio</strong>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <video autoplay muted loop playsinline poster="1234.jpg">
-    <source src="1234.mp4" type="video/mp4">
-  </video>
+<video autoplay muted loop playsinline poster="1234.jpg">
+<source src="1234.mp4" type="video/mp4">
+</video>
 
-  <div class="hero-content" data-aos="zoom-in">
-    <img src="IMG_7597.jpg" alt="Swapnadip Mondal">
-    <h1>Swapnadip Mondal</h1>
-    <p>Founder & CEO — SM Web Studio</p>
-    <a class="btn" href="https://wa.me/916296314411" target="_blank">Chat on WhatsApp</a>
-  </div>
+<div class="hero-content" data-aos="zoom-in">
+<img src="IMG_7597.jpg" alt="SM Web Studio Logo">
+<h1>Swapnadip Mondal</h1>
+<p>Founder & CEO of <strong>SM Web Studio</strong></p>
+<a class="btn" href="https://wa.me/916296314411">💬 Chat on WhatsApp</a>
+</div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About SM Web Studio</h2>
-  <p>We design modern, fast, and conversion-focused websites for businesses and professionals.</p>
+<h2>About SM Web Studio</h2>
+<p>We create modern, responsive and high-converting websites for businesses and individuals.</p>
 
-  <div class="gallery">
-    <img src="IMG_7608.PNG" alt="Work Preview 1">
-    <img src="IMG_7606.PNG" alt="Work Preview 2">
-  </div>
+<div class="gallery">
+<img src="IMG_7606.PNG" alt="">
+<img src="IMG_7607.PNG" alt="">
+<img src="IMG_7608.PNG" alt="">
+</div>
+
+<div class="nav-btns">
+<button onclick="location.href='#home'">← Previous</button>
+<button onclick="location.href='#services'">Next →</button>
+</div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-  <h2>Our Services</h2>
-  <p>Business Websites • Portfolio • Landing Pages • E-commerce</p>
+<h2>Our Services</h2>
+<p>Business Websites • Portfolio • Landing Pages • E-commerce</p>
+
+<div class="nav-btns">
+<button onclick="location.href='#about'">← Previous</button>
+<button onclick="location.href='#contact'">Next →</button>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
-  <p>📞 +91 6296314411</p>
-  <p>✉️ swapnadip2007@yahoo.com</p>
-  <a class="btn" href="https://wa.me/916296314411" target="_blank">Get Free Consultation</a>
+<h2>Contact</h2>
+<p>📞 +91 6296314411</p>
+<p>✉️ swapnadip2007@yahoo.com</p>
+<p>📍 Kolkata, India</p>
+
+<a class="btn" href="https://wa.me/916296314411">Get Free Consultation</a>
+
+<div class="nav-btns">
+<button onclick="location.href='#services'">← Previous</button>
+<button onclick="location.href='#home'">Back to Top ↑</button>
+</div>
 </section>
 
 <footer>
-  © 2026 SM Web Studio | <a href="privacy-policy.html">Privacy Policy</a>
+© 2026 SM Web Studio • Privacy • Cookies • Terms
 </footer>
+
+<a class="whatsapp" href="https://wa.me/916296314411">💬</a>
+<div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({ duration: 1000, once: true });
+AOS.init({duration:1000,once:true});
+window.onscroll=()=>{topBtn.style.display=scrollY>300?'block':'none'}
 </script>
 
 </body>
