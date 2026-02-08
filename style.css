@@ -287,6 +287,57 @@ nav a {
 #founder li {
   margin-bottom: 10px;
 }
+.about-me {
+  padding: 60px 20px;
+  background: transparent;
+  color: #ffffff;
+}
+
+.about-me .container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-me h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about-me h3 {
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+.about-me p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #d1d5db;
+  margin-bottom: 15px;
+}
+
+.about-me ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-me ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.about-me ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+}
+
+.cta-text {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #3b82f6;
+}
 
 
 
