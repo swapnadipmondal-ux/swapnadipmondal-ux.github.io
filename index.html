@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-<!-- Google AdSense (SAFE) -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8884576525136905"
 crossorigin="anonymous"></script>
 
@@ -81,36 +80,12 @@ z-index:2;
 max-width:800px;
 padding:20px;
 }
-<section class="about-me">
-  <div class="container">
-    <h2>About Me</h2>
-    <p>
-      Hi, I’m <strong>Swapnadip Mondal</strong>, Founder & CEO of 
-      <strong>SM Web Studio</strong>. I design and develop modern, responsive,
-      and high-performing websites that help businesses grow online.
-    </p>
-
-    <p>
-      I focus on clean design, fast performance, and user-friendly experiences.
-      Every website I build is crafted to look professional, work smoothly on
-      all devices, and convert visitors into customers.
-    </p>
-
-    <h3>What I Do</h3>
-    <ul>
-      <li>Custom Website Design & Development</li>
-      <li>Responsive & SEO-Friendly Websites</li>
-      <li>Business & Landing Page Websites</li>
-      <li>Portfolio & Personal Websites</li>
-      <li>Website Redesign & Optimization</li>
-    </ul>
-
-    <p class="cta-text">
-      Let’s build something amazing together.
-    </p>
-  </div>
-</section>
-
+.identity{
+width:140px;
+border-radius:50%;
+border:4px solid #38bdf8;
+margin-bottom:15px;
+}
 
 /* BUTTON */
 .btn{
@@ -154,6 +129,12 @@ box-shadow:0 15px 40px rgba(0,0,0,.5);
 width:100%;
 border-radius:16px;
 margin-bottom:15px;
+}
+.about-text{
+max-width:900px;
+margin:30px auto 0;
+line-height:1.8;
+color:#cbd5f5;
 }
 
 /* GALLERY */
@@ -267,7 +248,7 @@ z-index:1000;
 </video>
 
 <div class="hero-content" data-aos="zoom-in">
-<img src="Identity.jpg" class="identity" alt="Identity">
+<img src="Owner 1.jpg" class="identity" alt="Owner">
 <h1>Swapnadip Mondal</h1>
 <p>Founder & CEO of <strong>SM Web Studio</strong></p>
 <a class="btn" href="https://wa.me/916296314411">💬 Chat on WhatsApp</a>
@@ -278,6 +259,19 @@ z-index:1000;
 <section id="about">
 <h2>About SM Web Studio</h2>
 <p>We create modern, responsive and high-converting websites.</p>
+
+<div class="about-text">
+<p>
+I’m Swapnadip Mondal, Founder of SM Web Studio. I help individuals and businesses
+build a strong online presence through clean design, smooth performance, and
+professional user experience.
+</p>
+<p>
+Every project is handled personally with focus on quality, speed, mobile
+responsiveness, and long-term reliability. My goal is to deliver websites that
+look premium and work perfectly for real customers.
+</p>
+</div>
 
 <div class="about-wrap">
 <div class="about-card" data-aos="fade-right">
@@ -341,7 +335,6 @@ z-index:1000;
 <script>
 AOS.init({duration:1000,once:true});
 </script>
-<link rel="icon" href="/favicon.ico">
 
 </body>
 </html>
