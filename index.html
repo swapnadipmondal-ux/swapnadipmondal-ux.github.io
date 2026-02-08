@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-<!-- Google AdSense -->
+<!-- Google AdSense (SAFE) -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8884576525136905"
 crossorigin="anonymous"></script>
 
@@ -26,12 +26,22 @@ header{
 position:fixed;
 top:0;width:100%;
 z-index:1000;
-padding:15px 30px;
+padding:14px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(2,6,23,.75);
-backdrop-filter:blur(12px);
+background:rgba(2,6,23,.7);
+backdrop-filter:blur(14px);
+}
+.header-left{
+display:flex;
+align-items:center;
+gap:12px;
+}
+.header-left img{
+width:42px;height:42px;
+border-radius:50%;
+border:2px solid #38bdf8;
 }
 header strong{font-size:18px}
 header a{
@@ -58,21 +68,25 @@ top:50%;left:50%;
 min-width:100%;min-height:100%;
 transform:translate(-50%,-50%);
 object-fit:cover;
+filter:brightness(.55);
 }
 .hero::after{
 content:"";
 position:absolute;inset:0;
-background:linear-gradient(to bottom,rgba(2,6,23,.6),#020617);
+background:linear-gradient(to bottom,rgba(2,6,23,.4),#020617);
 }
 .hero-content{
-position:relative;z-index:2;
+position:relative;
+z-index:2;
+max-width:800px;
+padding:20px;
 }
-.hero-content img{
-width:140px;height:140px;
-border-radius:50%;
-border:4px solid #38bdf8;
-margin-bottom:20px;
-box-shadow:0 20px 50px rgba(0,0,0,.6);
+.identity{
+width:100%;
+max-width:520px;
+border-radius:18px;
+box-shadow:0 25px 70px rgba(0,0,0,.7);
+margin:0 auto 25px;
 }
 
 /* BUTTON */
@@ -97,13 +111,35 @@ padding:120px 20px;
 text-align:center;
 }
 
+/* ABOUT */
+.about-wrap{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:50px;
+}
+.about-card{
+max-width:420px;
+background:#020617;
+border:1px solid #1e293b;
+border-radius:20px;
+padding:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+}
+.about-card img{
+width:100%;
+border-radius:16px;
+margin-bottom:15px;
+}
+
 /* GALLERY */
 .gallery{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:25px;
-margin-top:40px;
+margin-top:50px;
 }
 .gallery img{
 width:280px;
@@ -115,7 +151,32 @@ box-shadow:0 15px 40px rgba(0,0,0,.5);
 transform:translateY(-10px) scale(1.04);
 }
 
-/* NEXT / PREV */
+/* SERVICES */
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:40px;
+}
+.card{
+background:#020617;
+border:1px solid #1e293b;
+padding:30px 25px;
+width:260px;
+border-radius:20px;
+transition:.4s;
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+}
+.card h3{color:#38bdf8;margin-bottom:10px}
+.card p{font-size:14px;color:#cbd5f5;margin-bottom:15px}
+.card b{font-size:18px;color:#22c55e}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(56,189,248,.4);
+}
+
+/* NAV BUTTONS */
 .nav-btns{
 margin-top:50px;
 display:flex;
@@ -133,7 +194,16 @@ color:#fff;
 }
 .nav-btns button:hover{background:#2563eb}
 
-/* WHATSAPP FLOAT */
+/* FOOTER */
+footer{
+background:#020617;
+padding:35px;
+text-align:center;
+font-size:14px;
+color:#94a3b8;
+}
+
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 right:20px;bottom:20px;
@@ -144,32 +214,10 @@ border-radius:50%;
 font-size:22px;
 text-decoration:none;
 z-index:1000;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
-
-/* SCROLL TOP */
-#topBtn{
-position:fixed;
-bottom:90px;right:20px;
-display:none;
-padding:12px 15px;
-border-radius:50%;
-background:#2563eb;
-color:#fff;
-cursor:pointer;
-}
-
-/* FOOTER */
-footer{
-background:#020617;
-padding:35px;
-text-align:center;
-font-size:14px;
-color:#94a3b8;
 }
 
 @media(max-width:768px){
-.hero-content img{width:110px;height:110px}
+.hero h1{font-size:30px}
 }
 </style>
 </head>
@@ -177,7 +225,10 @@ color:#94a3b8;
 <body>
 
 <header>
+<div class="header-left">
+<img src="Logo1.jpg" alt="Logo">
 <strong>SM Web Studio</strong>
+</div>
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -193,7 +244,7 @@ color:#94a3b8;
 </video>
 
 <div class="hero-content" data-aos="zoom-in">
-<img src="IMG_7597.jpg" alt="SM Web Studio Logo">
+<img src="Identity.jpg" class="identity" alt="Identity">
 <h1>Swapnadip Mondal</h1>
 <p>Founder & CEO of <strong>SM Web Studio</strong></p>
 <a class="btn" href="https://wa.me/916296314411">💬 Chat on WhatsApp</a>
@@ -203,12 +254,21 @@ color:#94a3b8;
 <!-- ABOUT -->
 <section id="about">
 <h2>About SM Web Studio</h2>
-<p>We create modern, responsive and high-converting websites for businesses and individuals.</p>
+<p>We create modern, responsive and high-converting websites.</p>
+
+<div class="about-wrap">
+<div class="about-card" data-aos="fade-right">
+<img src="Owner 1.jpg" alt="">
+</div>
+<div class="about-card" data-aos="fade-left">
+<img src="Owner 2.jpg" alt="">
+</div>
+</div>
 
 <div class="gallery">
-<img src="IMG_7606.PNG" alt="">
-<img src="IMG_7607.PNG" alt="">
-<img src="IMG_7608.PNG" alt="">
+<img src="1-2.jpg">
+<img src="2.jpg">
+<img src="10.jpg">
 </div>
 
 <div class="nav-btns">
@@ -217,33 +277,18 @@ color:#94a3b8;
 </div>
 </section>
 
-<!-- SERVICES SECTION -->
-<section id="services" class="section">
-  <div class="section-content" style="text-align:center;">
-    <h2>Our Services</h2>
-    <div class="cards" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-      <div class="card" style="text-align:center;">
-        <h3>Business Website</h3>
-        <p>Professional websites, SEO-friendly, mobile-optimized, and modern design.</p>
-        <b>₹2,999+</b>
-      </div>
-      <div class="card" style="text-align:center;">
-        <h3>Portfolio Website</h3>
-        <p>Showcase skills, projects, and achievements with a stunning portfolio.</p>
-        <b>₹1,499+</b>
-      </div>
-      <div class="card" style="text-align:center;">
-        <h3>Landing Page</h3>
-        <p>Promote products or services with high-converting landing pages.</p>
-        <b>₹999+</b>
-      </div>
-      <div class="card" style="text-align:center;">
-        <h3>E-commerce Website</h3>
-        <p>Sell products online with secure, responsive e-commerce websites.</p>
-        <b>₹3,999+</b>
-      </div>
-    </div>
-  </div>
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+
+<div class="cards">
+<div class="card"><h3>Business Website</h3><p>Professional & SEO-friendly websites.</p><b>₹2,999+</b></div>
+<div class="card"><h3>Portfolio Website</h3><p>Showcase skills & projects.</p><b>₹1,499+</b></div>
+<div class="card"><h3>Landing Page</h3><p>High converting landing pages.</p><b>₹999+</b></div>
+<div class="card"><h3>E-commerce Website</h3><p>Secure online stores.</p><b>₹3,999+</b></div>
+</div>
+
+<div class="nav-btns">
 <button onclick="location.href='#about'">← Previous</button>
 <button onclick="location.href='#contact'">Next →</button>
 </div>
@@ -255,7 +300,6 @@ color:#94a3b8;
 <p>📞 +91 6296314411</p>
 <p>✉️ swapnadip2007@yahoo.com</p>
 <p>📍 Kolkata, India</p>
-
 <a class="btn" href="https://wa.me/916296314411">Get Free Consultation</a>
 
 <div class="nav-btns">
@@ -265,16 +309,14 @@ color:#94a3b8;
 </section>
 
 <footer>
-© 2026 SM Web Studio • Privacy • Cookies • Terms
+© 2026 SM Web Studio • Privacy Policy • Cookies • Terms
 </footer>
 
 <a class="whatsapp" href="https://wa.me/916296314411">💬</a>
-<div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({duration:1000,once:true});
-window.onscroll=()=>{topBtn.style.display=scrollY>300?'block':'none'}
 </script>
 
 </body>
