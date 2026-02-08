@@ -89,6 +89,58 @@ function addReview() {
 
 loadReviews();
 </script>
+<script>
+  if (window.innerWidth > 768) {
+    const items = document.querySelectorAll('.parallax-item');
+
+    document.addEventListener('mousemove', (e) => {
+      const x = window.innerWidth / 2 - e.clientX;
+      const y = window.innerHeight / 2 - e.clientY;
+
+      items.forEach((item) => {
+        let depth = 0.03;
+
+        if (item.classList.contains('depth-1')) depth = 0.06; // closest
+        if (item.classList.contains('depth-2')) depth = 0.04;
+        if (item.classList.contains('depth-3')) depth = 0.02; // farthest
+
+        gsap.to(item, {
+          x: -x * depth,
+          y: -y * depth,
+          rotationX: y * 0.008,
+          rotationY: -x * 0.008,
+          duration: 0.9,
+          ease: "power3.out"
+        });
+      });
+    });
+  }
+
+  /* Floating motion */
+  gsap.to(".depth-1", {
+    y: "+=20",
+    duration: 4,
+    yoyo: true,
+    repeat: -1,
+    ease: "sine.inOut"
+  });
+
+  gsap.to(".depth-2", {
+    y: "-=25",
+    duration: 5,
+    yoyo: true,
+    repeat: -1,
+    ease: "sine.inOut"
+  });
+
+  gsap.to(".depth-3", {
+    y: "+=15",
+    duration: 6,
+    yoyo: true,
+    repeat: -1,
+    ease: "sine.inOut"
+  });
+</script>
 
 
 
