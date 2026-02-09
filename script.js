@@ -141,6 +141,11 @@ loadReviews();
     ease: "sine.inOut"
   });
 </script>
+function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({
+        behavior: "smooth"
+    });
+}
 
 
 
