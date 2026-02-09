@@ -147,6 +147,42 @@ function scrollToContact() {
     });
 }
 
+<script>
+const form = document.getElementById("reviewForm");
+const reviewsDiv = document.getElementById("reviews");
+
+let reviews = JSON.parse(localStorage.getItem("asmReviews")) || [];
+
+function displayReviews() {
+  reviewsDiv.innerHTML = "";
+  reviews.forEach(r => {
+    reviewsDiv.innerHTML += `
+      <div class="review">
+        <strong>${r.name}</strong> – ${r.rating}⭐
+        <p>${r.text}</p>
+      </div>
+    `;
+  });
+}
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const review = {
+    name: name.value,
+    rating: rating.value,
+    text: review.value
+  };
+
+  reviews.push(review);
+  localStorage.setItem("asmReviews", JSON.stringify(reviews));
+
+  form.reset();
+  displayReviews();
+});
+
+displayReviews();
+</script>
 
 
 
