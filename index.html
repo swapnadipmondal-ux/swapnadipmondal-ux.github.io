@@ -638,6 +638,14 @@ AOS.init({duration:1000,once:true});
     performance, mobile responsiveness, and long-term reliability.
   </p>
 </section>
+      <script>
+document.querySelectorAll("video").forEach(video=>{
+  if(window.innerWidth < 768){
+    video.setAttribute("poster","1234.jpg");
+  }
+});
+</script>
+
 
 
     </body>
