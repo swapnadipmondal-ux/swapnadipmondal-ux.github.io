@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="application/ld+json">
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -30,9 +31,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8884576525136905"
-crossorigin="anonymous"></script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -73,18 +71,6 @@ margin-left:18px;
 font-weight:500;
 }
 header a:hover{color:#38bdf8}
-  <section class="video-bg-section">
-  <video autoplay muted loop playsinline>
-    <source src="assets/1-2.mp4" type="video/mp4">
-  </video>
-
-  <div style="position:relative;z-index:2;text-align:center;padding-top:120px;">
-    <img src="assets/IMG_7664.PNG">
-    <img src="assets/IMG_7665.PNG">
-    <img src="assets/IMG_7666.PNG">
-  </div>
-</section>
-
 
 /* HERO */
 .hero{
@@ -144,95 +130,6 @@ padding:120px 20px;
 text-align:center;
 }
 
-/* ABOUT */
-.about-wrap{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:40px;
-margin-top:50px;
-}
-.about-card{
-max-width:420px;
-background:#020617;
-border:1px solid #1e293b;
-border-radius:20px;
-padding:25px;
-box-shadow:0 15px 40px rgba(0,0,0,.5);
-}
-.about-card img{
-width:100%;
-border-radius:16px;
-margin-bottom:15px;
-}
-.about-text{
-max-width:900px;
-margin:30px auto 0;
-line-height:1.8;
-color:#cbd5f5;
-}
-
-/* GALLERY */
-.gallery{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-margin-top:50px;
-}
-.gallery img{
-width:280px;
-border-radius:18px;
-transition:.4s;
-box-shadow:0 15px 40px rgba(0,0,0,.5);
-}
-.gallery img:hover{
-transform:translateY(-10px) scale(1.04);
-}
-
-/* SERVICES */
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-margin-top:40px;
-}
-.card{
-background:#020617;
-border:1px solid #1e293b;
-padding:30px 25px;
-width:260px;
-border-radius:20px;
-transition:.4s;
-box-shadow:0 15px 40px rgba(0,0,0,.5);
-}
-.card h3{color:#38bdf8;margin-bottom:10px}
-.card p{font-size:14px;color:#cbd5f5;margin-bottom:15px}
-.card b{font-size:18px;color:#22c55e}
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 30px rgba(56,189,248,.4);
-}
-
-/* NAV BUTTONS */
-.nav-btns{
-margin-top:50px;
-display:flex;
-justify-content:center;
-gap:20px;
-}
-.nav-btns button{
-padding:12px 25px;
-border-radius:50px;
-border:none;
-cursor:pointer;
-font-weight:600;
-background:#1e293b;
-color:#fff;
-}
-.nav-btns button:hover{background:#2563eb}
-
 /* FOOTER */
 footer{
 background:#020617;
@@ -254,13 +151,9 @@ font-size:22px;
 text-decoration:none;
 z-index:1000;
 }
-
-@media(max-width:768px){
-.hero h1{font-size:30px}
-}
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
@@ -276,7 +169,6 @@ z-index:1000;
 </nav>
 </header>
 
-<!-- HERO -->
 <section id="home" class="hero">
 <video autoplay muted loop playsinline poster="1234.jpg">
 <source src="1234.mp4" type="video/mp4">
@@ -290,74 +182,33 @@ z-index:1000;
 </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
 <h2>About SM Web Studio</h2>
 <p>We create modern, responsive and high-converting websites.</p>
 
-<div class="about-text">
 <p>
 I’m Swapnadip Mondal, Founder of SM Web Studio. I help individuals and businesses
 build a strong online presence through clean design, smooth performance, and
 professional user experience.
 </p>
+
 <p>
 Every project is handled personally with focus on quality, speed, mobile
-responsiveness, and long-term reliability. My goal is to deliver websites that
-look premium and work perfectly for real customers.
+responsiveness, and long-term reliability.
 </p>
-</div>
-
-<div class="about-wrap">
-<div class="about-card" data-aos="fade-right">
-<img src="Owner 1.jpg" alt="">
-</div>
-<div class="about-card" data-aos="fade-left">
-<img src="Owner 2.jpg" alt="">
-</div>
-</div>
-
-<div class="gallery">
-<img src="1-2.jpg">
-<img src="2.jpg">
-<img src="10.jpg">
-</div>
-
-<div class="nav-btns">
-<button onclick="location.href='#home'">← Previous</button>
-<button onclick="location.href='#services'">Next →</button>
-</div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
 <h2>Our Services</h2>
-
-<div class="cards">
-<div class="card"><h3>Business Website</h3><p>Professional & SEO-friendly websites.</p><b>₹2,999+</b></div>
-<div class="card"><h3>Portfolio Website</h3><p>Showcase skills & projects.</p><b>₹1,499+</b></div>
-<div class="card"><h3>Landing Page</h3><p>High converting landing pages.</p><b>₹999+</b></div>
-<div class="card"><h3>E-commerce Website</h3><p>Secure online stores.</p><b>₹3,999+</b></div>
-</div>
-
-<div class="nav-btns">
-<button onclick="location.href='#about'">← Previous</button>
-<button onclick="location.href='#contact'">Next →</button>
-</div>
+<p>Business Website • Portfolio • Landing Page • E-commerce</p>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 <p>📞 +91 6296314411</p>
 <p>✉️ swapnadip2007@yahoo.com</p>
 <p>📍 Kolkata, India</p>
 <a class="btn" href="https://wa.me/916296314411">Get Free Consultation</a>
-
-<div class="nav-btns">
-<button onclick="location.href='#services'">← Previous</button>
-<button onclick="location.href='#home'">Back to Top ↑</button>
-</div>
 </section>
 
 <footer>
@@ -369,362 +220,10 @@ look premium and work perfectly for real customers.
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({duration:1000,once:true});
-</script>
-<footer class="sm-footer">
-  <div class="sm-footer-wrap">
-
-    <div class="sm-col">
-      <h4>Quick Access</h4>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our Services</a></li>
-        <li><a href="#">Work Portfolio</a></li>
-        <li><a href="#">Case Studies</a></li>
-        <li><a href="#">About SM Web Studio</a></li>
-      </ul>
-    </div>
-
-    <div class="sm-col">
-      <h4>Development</h4>
-      <ul>
-        <li>Custom Website Development</li>
-        <li>WordPress Solutions</li>
-        <li>Shopify & Ecommerce Stores</li>
-        <li>Mobile App Development</li>
-        <li>Business Web Applications</li>
-        <li>Secure Ecommerce Platforms</li>
-      </ul>
-    </div>
-
-    <div class="sm-col">
-      <h4>Design</h4>
-      <ul>
-        <li>Modern Website Design</li>
-        <li>UI / UX Design Systems</li>
-        <li>Mobile-First Design</li>
-        <li>Responsive Layout Design</li>
-        <li>Custom Brand Design</li>
-        <li>Corporate Website Design</li>
-      </ul>
-    </div>
-
-    <div class="sm-col">
-      <h4>Marketing</h4>
-      <ul>
-        <li>Digital Growth Marketing</li>
-        <li>SEO Optimization</li>
-        <li>Social Media Campaigns</li>
-        <li>Facebook & Instagram Ads</li>
-        <li>Performance Marketing</li>
-        <li>Online Brand Promotion</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="sm-footer-bottom">
-    <p>© 2026 <strong>SM Web Studio</strong> — Crafted & Managed by Swapnadip Mondal</p>
-  </div>
-</footer>
-<!-- THEME TOGGLE -->
-<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-
-<section class="sm-dark-section reveal">
-
-  <h2>What People Are Saying</h2>
-  <p class="sm-desc">
-    Trusted by businesses for design, development, and digital growth.
-  </p>
-
-  <!-- TESTIMONIAL SLIDER -->
-  <div class="testimonial-slider">
-    <div class="testimonial-track" id="testimonialTrack">
-      <div class="testimonial">“Great experience and fast delivery.”</div>
-      <div class="testimonial">“Professional work with premium quality.”</div>
-      <div class="testimonial">“Highly recommended for startups.”</div>
-    </div>
-  </div>
-
-  <!-- STATS -->
-  <div class="stats-grid">
-    <div class="stat-box">
-      <h3 data-count="1">1</h3>
-      <p>Year Experience</p>
-    </div>
-    <div class="stat-box">
-      <h3 data-count="200">54+</h3>
-      <p>Projects Completed</p>
-    </div>
-    <div class="stat-box">
-      <h3 data-count="100">100+</h3>
-      <p>Client Satisfaction %</p>
-    </div>
-    <div class="stat-box">
-      <h3>24/7</h3>
-      <p>Support</p>
-    </div>
-  </div>
-
-  <!-- ADMIN TESTIMONIAL ADD -->
-  <div class="admin-panel">
-    <input id="reviewText" placeholder="Add testimonial (admin)">
-    <button onclick="addReview()">Add Testimonial</button>
-  </div>
-
-  <div id="testimonialList"></div>
-
-</section>
-
-<!-- WHATSAPP POPUP -->
-<div class="wa-popup" id="waPopup">
-  <p>👋 Need a website?</p>
-  <a href="https://wa.me/+916296314411" target="_blank">Chat on WhatsApp</a>
-  <span onclick="closeWA()">✕</span>
-</div>
-<!-- GSAP CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
-<section class="video-bg-section">
-  <!-- Background Video -->
-  <video class="bg-video" autoplay muted loop playsinline>
-    <source src="assets/1-2.mp4" type="video/mp4">
-  </video>
-
-  <!-- Overlay -->
-  <div class="video-overlay"></div>
-
-  <!-- GSAP Parallax -->
-  <div class="gsap-parallax">
-    <img src="assets/IMG_7664.PNG" class="parallax-item depth-1" alt="">
-    <img src="assets/IMG_7665.PNG" class="parallax_
-     <img src="assets/IMG_766.PNG" class="parallax_
-
-</body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SM Web Studio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-  
-<body>
-  
-<!-- TRUST & IDENTITY SECTION -->
-<section class="trust-identity-section" style="padding:100px 20px;text-align:center;">
-  <h2>Who is Swapnadip Mondal?</h2>
-  <p style="max-width:900px;margin:20px auto;line-height:1.8;color:#cbd5f5;">
-    <strong>Swapnadip Mondal</strong> is a web designer and developer from
-    <strong>Kolkata, India</strong>, and the founder of
-    <strong>SM Web S
-
-<header>
-    <h1>SM Web Studio</h1>
-    <p>Fast • Secure • Scalable Websites</p>
-</header>
-
-<nav>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="hero">
-    <h2>We Build Powerful Websites</h2>
-    <p>Built to handle thousands of visitors with zero downtime.</p>
-    <button onclick="scrollToContact()">Get Started</button>
-</section>
-
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="cards">
-        <div class="card">Website Design</div>
-        <div class="card">Cloud Hosting</div>
-        <div class="card">SEO Optimization</div>
-        <div class="card">Business Websites</div>
-    </div>
-</section>
-
-<section id="about">
-    <h2>About SM Web Studio</h2>
-    <p>
-        SM Web Studio delivers fast, secure, and scalable websites using modern
-        cloud technology. Built for growth and reliability.
-    </p>
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/yourFormID" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-<footer>
-    <p>© 2026 SM Web Studio. All rights reserved.</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-<section class="trust-section">
-  <h2>Why Trust SM Web Studio</h2>
-  <p>
-    SM Web Studio is a founder-led web studio run by
-    <strong>Swapnadip Mondal</strong>.
-    Every project is handled personally with full transparency,
-    clear communication, and written policies.
-  </p>
-
-  <ul class="trust-points">
-    <li>✔ Real person, real business</li>
-    <li>✔ Direct communication with the founder</li>
-    <li>✔ Clear pricing & written Terms</li>
-    <li>✔ Privacy Policy to protect your data</li>
-    <li>✔ No hidden charges</li>
-  </ul>
-</section>
-<section class="payment-section">
-  <h2>Payment & Work Policy</h2>
-
-  <p>
-    To start any project, we take a
-    <strong>40% advance payment</strong>.
-    This allows us to reserve time, plan your project properly,
-    and begin design and development.
-  </p>
-
-  <p>
-    The remaining <strong>60%</strong> is paid
-    <strong>only after you review and approve the work</strong>.
-  </p>
-
-  <p>
-    All project details, scope, and payment terms are clearly
-    mentioned in our <strong>Terms & Conditions</strong>.
-    There are no hidden surprises.
-  </p>
-
-  <p><strong>Your safety matters.</strong></p>
-</section>
-
-<section class="process-section">
-  <h2>How We Work</h2>
-  <ol>
-    <li>Free consultation</li>
-    <li>Requirement & price confirmation</li>
-    <li>40% advance to start work</li>
-    <li>Design preview & revisions</li>
-    <li>Final approval</li>
-    <li>Remaining 60% payment</li>
-    <li>Website delivery & support</li>
-  </ol>
-</section>
-
-<section class="personal-identity">
-  <h2>Who is Swapnadip Mondal?</h2>
-  <p>
-    Swapnadip Mondal is a web designer and developer from Kolkata, India,
-    and the founder of <strong>SM Web Studio</strong>.
-    He helps individuals and small businesses build modern,
-    responsive, and high-performing websites.
-  </p>
-
-  <p>
-    Swapnadip personally handles each project, focusing on clean design,
-    performance, mobile responsiveness, and long-term reliability.
-  </p>
-</section>
-      <script>
-document.querySelectorAll("video").forEach(video=>{
-  if(window.innerWidth < 768){
-    video.setAttribute("poster","1234.jpg");
-  }
-});
+function toggleTheme(){}
+function addReview(){}
+function closeWA(){}
 </script>
 
-<h2>ASM Reviews</h2>
-
-<form id="reviewForm">
-  <input type="text" id="name" placeholder="Your name" required>
-
-  <select id="rating" required>
-    <option value="">Rating</option>
-    <option value="5">★★★★★</option>
-    <option value="4">★★★★</option>
-    <option value="3">★★★</option>
-    <option value="2">★★</option>
-    <option value="1">★</option>
-  </select>
-
-  <textarea id="review" placeholder="Write your review" required></textarea>
-
-  <button type="submit">Submit Review</button>
-</form>
-
-<div id="reviews"></div>
-<section id="reviews">
-  <h2>Client Reviews</h2>
-  <p>
-    SM Web Studio by Swapnadip Mondal has received positive reviews from clients
-    for modern, responsive, and high-converting website design services.
-  </p>
-
-  <p>
-    SAM (SM Web Studio) reviews highlight quality design, professional workflow,
-    and client satisfaction.
-  </p>
-</section>
-      <section id="reviews">
-  <h2>What Clients Say</h2>
-
-  <p>
-    SM Web Studio by Swapnadip Mondal is known for delivering clean,
-    modern, and responsive websites. Clients appreciate the attention
-    to detail, fast communication, and reliable project delivery.
-  </p>
-
-  <div class="review">
-    <p>⭐️⭐️⭐️⭐️⭐️</p>
-    <p>
-      “Very professional web designer. The website was delivered on time
-      and looked exactly as expected. Highly recommended.”
-    </p>
-    <p><strong>— Small Business Owner</strong></p>
-  </div>
-
-  <div class="review">
-    <p>⭐️⭐️⭐️⭐️⭐️</p>
-    <p>
-      “Clean design, mobile-friendly layout, and great support even after
-      the project was completed.”
-    </p>
-    <p><strong>— Startup Founder</strong></p>
-  </div>
-
-  <div class="review">
-    <p>⭐️⭐️⭐️⭐️⭐️</p>
-    <p>
-      “SM Web Studio (SAM) reviews reflect quality work and a smooth
-      development process. Would definitely work again.”
-    </p>
-    <p><strong>— Portfolio Client</strong></p>
-  </div>
-</section>
-
-    </body>
-
-
-
-
-  
+</body>
 </html>
-
-
-
-
-
-      
