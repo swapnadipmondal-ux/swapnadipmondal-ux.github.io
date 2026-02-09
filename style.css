@@ -836,6 +836,21 @@ img {
   border-radius: 20px;
   box-shadow: 0 30px 60px rgba(0,0,0,0.06);
 }
+/* Follow us section color change */
+.follow-red {
+  color: #ff1a1a; /* bright red */
+}
+
+.follow-red a {
+  color: #ff1a1a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.follow-red a:hover {
+  color: #cc0000; /* darker red on hover */
+  text-decoration: underline;
+}
 
 
 
