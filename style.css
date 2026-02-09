@@ -806,7 +806,37 @@ img {
   margin: 10px 0;
   border-radius: 6px;
 }
---brand-color: #2563eb;
+:root {
+  --brand: #1e40af; /* 🔵 CHANGE this to your website main color */
+}
+
+.premium-middle {
+  padding: 100px 24px;
+  background:
+    /* Soft color glow */
+    radial-gradient(
+      circle at top,
+      color-mix(in srgb, var(--brand) 12%, #ffffff),
+      #ffffff 60%
+    ),
+    /* Fine diagonal texture */
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.015),
+      rgba(0,0,0,0.015) 1px,
+      transparent 1px,
+      transparent 7px
+    ),
+    /* Grain texture */
+    radial-gradient(
+      rgba(0,0,0,0.04) 1px,
+      transparent 1px
+    );
+  background-size: cover, 10px 10px, 4px 4px;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+}
+
 
 
 
