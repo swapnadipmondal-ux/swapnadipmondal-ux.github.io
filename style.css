@@ -796,6 +796,11 @@ html {
   .gallery img {
     width: 9
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 
