@@ -184,6 +184,32 @@ form.addEventListener("submit", e => {
 displayReviews();
 </script>
 
+:root {
+  --brand-color: #2563eb; /* 🔥 CHANGE THIS to your site color */
+}
+
+.premium-middle {
+  padding: 90px 24px;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--brand-color) 8%, #ffffff),
+      #ffffff
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.015) 0px,
+      rgba(0,0,0,0.015) 1px,
+      transparent 1px,
+      transparent 6px
+    ),
+    radial-gradient(
+      rgba(0,0,0,0.04) 1px,
+      transparent 1px
+    );
+  background-size: cover, 8px 8px, 4px 4px;
+  border-radius: 16px;
+}
 
 
 
