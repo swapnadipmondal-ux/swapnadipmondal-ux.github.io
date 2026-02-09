@@ -708,6 +708,41 @@ footer {
     text-align: center;
     padding: 15px;
 }
+/* FORCE VIDEO BACKGROUND TO SHOW */
+.video-bg-section{
+  position: relative !important;
+  min-height: 100vh !important;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.video-bg-section video{
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  z-index: 0 !important;
+  display: block !important;
+}
+
+.video-bg-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(2,6,23,.6);
+  z-index:1;
+}
+
+/* PARALLAX IMAGES FORCE */
+.video-bg-section img{
+  position: relative;
+  z-index: 2;
+  max-width: 240px;
+  display: inline-block !important;
+  margin: 20px;
+}
 
 
 
