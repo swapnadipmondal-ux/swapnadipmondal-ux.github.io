@@ -1,30 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Swapnadip Mondal",
-  "jobTitle": "Founder & Web Developer",
-  "url": "https://yourwebsite.com",
-  "sameAs": [
-    "https://www.linkedin.com/in/yourprofile",
-    "https://www.instagram.com/yourprofile"
-  ],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "SM Web Studio"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Kolkata",
-    "addressCountry": "India"
-  }
-}
-</script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SM Web Studio | Professional Web Design</title>
@@ -32,187 +8,202 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-font-family:Poppins,sans-serif;
-background:#020617;
-color:#e5e7eb;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+body{background:#020617;color:#e5e7eb;scroll-behavior:smooth;}
+section{padding:100px 20px;text-align:center;position:relative;}
 
 /* HEADER */
-header{
-position:fixed;
-top:0;width:100%;
-z-index:1000;
-padding:14px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(2,6,23,.7);
-backdrop-filter:blur(14px);
-}
-.header-left{
-display:flex;
-align-items:center;
-gap:12px;
-}
-.header-left img{
-width:42px;height:42px;
-border-radius:50%;
-border:2px solid #38bdf8;
-}
-header strong{font-size:18px}
-header a{
-color:#e5e7eb;
-text-decoration:none;
-margin-left:18px;
-font-weight:500;
-}
-header a:hover{color:#38bdf8}
+header{position:fixed;top:0;width:100%;z-index:1000;padding:14px 30px;display:flex;justify-content:space-between;align-items:center;background:rgba(2,6,23,.8);backdrop-filter:blur(14px);}
+header strong{font-size:20px;color:#38bdf8;}
+header a{color:#e5e7eb;text-decoration:none;margin-left:18px;font-weight:500;}
+header a:hover{color:#2563eb;}
+
+/* SOCIAL LINKS IN HEADER */
+header .social-links a{margin-left:12px;font-size:14px;color:#38bdf8;}
+header .social-links a:hover{color:#fff;}
+
+/* BANNER SHORTCUTS */
+.banner-shortcuts{
+position:fixed;top:70px;right:20px;background:#1e293b;padding:15px 20px;border-radius:12px;z-index:999;font-size:14px;color:#fff;max-width:250px;box-shadow:0 10px 30px rgba(0,0,0,0.5);}
+.banner-shortcuts h4{margin-bottom:8px;font-size:16px;color:#38bdf8;}
 
 /* HERO */
-.hero{
-position:relative;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-overflow:hidden;
-}
-.hero video{
-position:absolute;
-top:50%;left:50%;
-min-width:100%;min-height:100%;
-transform:translate(-50%,-50%);
-object-fit:cover;
-filter:brightness(.55);
-}
-.hero::after{
-content:"";
-position:absolute;inset:0;
-background:linear-gradient(to bottom,rgba(2,6,23,.4),#020617);
-}
-.hero-content{
-position:relative;
-z-index:2;
-max-width:800px;
-padding:20px;
-}
-.identity{
-width:140px;
-border-radius:50%;
-border:4px solid #38bdf8;
-margin-bottom:15px;
-}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+.hero video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;transform:translate(-50%,-50%);object-fit:cover;filter:brightness(.55);}
+.hero-content{position:relative;z-index:2;color:#fff;max-width:700px;}
+.hero-content img.identity{width:140px;border-radius:50%;border:4px solid #38bdf8;margin-bottom:15px;}
 
 /* BUTTON */
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 36px;
-border-radius:50px;
-background:linear-gradient(90deg,#2563eb,#1e40af);
-color:#fff;text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
-.btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 25px #2563eb;
-}
+.btn{display:inline-block;margin-top:25px;padding:14px 36px;border-radius:50px;background:linear-gradient(90deg,#2563eb,#1e40af);color:#fff;text-decoration:none;font-weight:600;transition:.3s;}
+.btn:hover{transform:scale(1.05);box-shadow:0 0 25px #2563eb;}
 
-/* SECTIONS */
-section{
-padding:120px 20px;
-text-align:center;
-}
+/* NAV BUTTONS */
+.nav-btns{margin-top:40px;display:flex;justify-content:center;gap:20px;}
+.nav-btns button{padding:12px 25px;border-radius:50px;border:none;cursor:pointer;font-weight:600;background:#1e293b;color:#fff;}
+.nav-btns button:hover{background:#2563eb;}
+
+/* SECTIONS DESIGN */
+section h2{color:#38bdf8;margin-bottom:20px;font-size:32px;}
+section p{max-width:900px;margin:15px auto;line-height:1.8;color:#cbd5f5;font-size:16px;}
+
+/* ABOUT */
+.about-wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin-top:50px;}
+.about-card{max-width:420px;background:#020617;border:1px solid #1e293b;border-radius:20px;padding:25px;box-shadow:0 15px 40px rgba(0,0,0,.5);}
+.about-card img{width:100%;border-radius:16px;}
+
+/* SERVICES */
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;margin-top:40px;}
+.card{background:#020617;border:1px solid #1e293b;padding:30px 25px;width:260px;border-radius:20px;transition:.4s;box-shadow:0 15px 40px rgba(0,0,0,.5);}
+.card h3{color:#38bdf8;margin-bottom:10px}
+.card p{font-size:14px;color:#cbd5f5;margin-bottom:15px}
+.card b{font-size:18px;color:#22c55e}
+.card:hover{transform:translateY(-10px);box-shadow:0 0 30px rgba(56,189,248,.4);}
+
+/* GALLERY */
+.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;margin-top:50px;}
+.gallery img{width:280px;border-radius:18px;transition:.4s;box-shadow:0 15px 40px rgba(0,0,0,.5);}
+.gallery img:hover{transform:translateY(-10px) scale(1.04);}
 
 /* FOOTER */
-footer{
-background:#020617;
-padding:35px;
-text-align:center;
-font-size:14px;
-color:#94a3b8;
-}
+footer{background:#020617;padding:35px;text-align:center;font-size:14px;color:#94a3b8;}
 
 /* WHATSAPP */
-.whatsapp{
-position:fixed;
-right:20px;bottom:20px;
-background:#25D366;
-color:#fff;
-padding:15px 18px;
-border-radius:50%;
-font-size:22px;
-text-decoration:none;
-z-index:1000;
-}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:15px 18px;border-radius:50%;font-size:22px;text-decoration:none;z-index:1000;}
 </style>
-
 </head>
 <body>
 
 <header>
 <div class="header-left">
-<img src="Logo1.jpg" alt="Logo">
+<img src="Logo1.jpg" alt="Logo" width="50">
 <strong>SM Web Studio</strong>
 </div>
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
 </nav>
+<div class="social-links">
+<a href="https://www.facebook.com/share/1H9GWhp2K7/?mibextid=wwXIfr" target="_blank">Facebook</a>
+<a href="https://www.linkedin.com/in/swapnadip-mondal-339a46354?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
+<a href="https://www.instagram.com/xodip._?igsh=MTE2b3d5NDF6aDZjeQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+<a href="https://www.instagram.com/smwebstudio.official?igsh=bGlwcW1ncmFpaHJu&utm_source=qr" target="_blank">Business IG</a>
+</div>
 </header>
 
+<!-- BANNER SHORTCUTS -->
+<div class="banner-shortcuts">
+<h4>Shortcuts</h4>
+<p>🔝 Top → Home</p>
+<p>⬇ Down → Next Section</p>
+<p>⬆ Up → Previous Section</p>
+<p>💬 WhatsApp → Chat</p>
+</div>
+
+<!-- HERO -->
 <section id="home" class="hero">
-<video autoplay muted loop playsinline poster="1234.jpg">
+<video autoplay muted loop playsinline>
 <source src="1234.mp4" type="video/mp4">
 </video>
-
 <div class="hero-content" data-aos="zoom-in">
-<img src="Owner 1.jpg" class="identity" alt="Owner">
+<img src="IMG_7664.PNG" class="identity" alt="Owner">
 <h1>Swapnadip Mondal</h1>
 <p>Founder & CEO of <strong>SM Web Studio</strong></p>
 <a class="btn" href="https://wa.me/916296314411">💬 Chat on WhatsApp</a>
 </div>
+<div class="nav-btns">
+<button onclick="scrollToSection('about')">Next ↓</button>
+</div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About SM Web Studio</h2>
-<p>We create modern, responsive and high-converting websites.</p>
-
-<p>
-I’m Swapnadip Mondal, Founder of SM Web Studio. I help individuals and businesses
-build a strong online presence through clean design, smooth performance, and
-professional user experience.
-</p>
-
-<p>
-Every project is handled personally with focus on quality, speed, mobile
-responsiveness, and long-term reliability.
-</p>
+<div class="about-wrap">
+<div class="about-card" data-aos="fade-right">
+<img src="IMG_7664.PNG" alt="Owner 1">
+<p>Founder Swapnadip Mondal - Handles all projects personally</p>
+</div>
+<div class="about-card" data-aos="fade-left">
+<img src="IMG_7665.PNG" alt="Owner 2">
+<p>Co-Owner assisting with Design & Development</p>
+</div>
+</div>
+<p>We create modern, responsive, high-converting websites with fast load times, smooth animations, and premium design. Payment via PhonePe, Google Pay, or 40% advance to start work.</p>
+<div class="nav-btns">
+<button onclick="scrollToSection('home')">↑ Previous</button>
+<button onclick="scrollToSection('services')">↓ Next</button>
+</div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
 <h2>Our Services</h2>
-<p>Business Website • Portfolio • Landing Page • E-commerce</p>
+<div class="cards">
+<div class="card"><h3>Business Website</h3><p>Professional & SEO-friendly websites.</p><b>₹2,999+</b></div>
+<div class="card"><h3>Portfolio Website</h3><p>Showcase skills & projects.</p><b>₹1,499+</b></div>
+<div class="card"><h3>Landing Page</h3><p>High converting landing pages.</p><b>₹999+</b></div>
+<div class="card"><h3>E-commerce Website</h3><p>Secure online stores.</p><b>₹3,999+</b></div>
+</div>
+<div class="nav-btns">
+<button onclick="scrollToSection('about')">↑ Previous</button>
+<button onclick="scrollToSection('gallery')">↓ Next</button>
+</div>
 </section>
 
+<!-- GALLERY -->
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="1-2.jpg" alt="">
+<img src="2.jpg" alt="">
+<img src="10.jpg" alt="">
+</div>
+<div class="nav-btns">
+<button onclick="scrollToSection('services')">↑ Previous</button>
+<button onclick="scrollToSection('contact')">↓ Next</button>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2>
+<h2>Contact Us</h2>
 <p>📞 +91 6296314411</p>
 <p>✉️ swapnadip2007@yahoo.com</p>
 <p>📍 Kolkata, India</p>
 <a class="btn" href="https://wa.me/916296314411">Get Free Consultation</a>
+<div class="nav-btns">
+<button onclick="scrollToSection('gallery')">↑ Previous</button>
+<button onclick="scrollToSection('home')">Back to Top ↑</button>
+</div>
+</section>
+
+<!-- VIDEO AT BOTTOM -->
+<section id="bottom-video" class="hero">
+<video autoplay muted loop playsinline>
+<source src="1-2.mp4" type="video/mp4">
+</video>
+<div class="hero-content" data-aos="zoom-in">
+<h2>SM Web Studio - Premium Web Solutions</h2>
+<p>Modern, responsive & scalable websites for your business.</p>
+</div>
 </section>
 
 <footer>
-© 2026 SM Web Studio • Privacy Policy • Cookies • Terms
+<p>© 2026 SM Web Studio • Privacy Policy • Terms</p>
+<p>
+Follow us: 
+<a href="https://www.facebook.com/share/1H9GWhp2K7/?mibextid=wwXIfr" target="_blank">Facebook</a> | 
+<a href="https://www.linkedin.com/in/swapnadip-mondal-339a46354?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a> | 
+<a href="https://www.instagram.com/xodip._?igsh=MTE2b3d5NDF6aDZjeQ%3D%3D&utm_source=qr" target="_blank">Instagram</a> | 
+<a href="https://www.instagram.com/smwebstudio.official?igsh=bGlwcW1ncmFpaHJu&utm_source=qr" target="_blank">Business IG</a>
+</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/916296314411">💬</a>
@@ -220,9 +211,16 @@ responsiveness, and long-term reliability.
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({duration:1000,once:true});
-function toggleTheme(){}
-function addReview(){}
-function closeWA(){}
+
+// Scroll to section function
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+// GSAP animations for sections
+gsap.utils.toArray("section").forEach(section=>{
+  gsap.from(section,{opacity:0,y:50,duration:1,scrollTrigger:{trigger:section,start:"top 80%"}});
+});
 </script>
 
 </body>
