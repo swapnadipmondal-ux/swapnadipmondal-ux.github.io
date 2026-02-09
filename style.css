@@ -743,6 +743,58 @@ footer {
   display: inline-block !important;
   margin: 20px;
 }
+/* === UNIVERSAL RESPONSIVE LAYER === */
+
+/* Base fix */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  section {
+    padding: 90px 16px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  header nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .identity {
+    width: 110px;
+  }
+
+  .about-wrap,
+  .cards,
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 9
 
 
 
